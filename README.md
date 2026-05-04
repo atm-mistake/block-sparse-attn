@@ -1,6 +1,6 @@
-# Block Sparse Attention (Custom CUDA Extension) For Linux Python 3.11 PyTorch 2.6.0+cu124 CUDA 12.4
+# Block Sparse Attention CUDA Extension (Precompiled Wheel)
 
-block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl
+```block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl```
 
 This is a pre-compiled custom CUDA extension for Block Sparse Attention, I used it on google colab so i decided to share it for you to save time. 
 
@@ -52,13 +52,13 @@ EOF
 ./bin/micromamba run -n py311 pip install -r requirements.txt --extra-index-url [https://download.pytorch.org/whl/cu124](https://download.pytorch.org/whl/cu124)
 
 # Download and install the pre-compiled custom wheel directly from GitHub Releases
-./bin/micromamba run -n py311 pip install [https://github.com/atm-mistake/YOUR_REPO_NAME/releases/download/v0.0.1/block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl](https://github.com/atm-mistake/block-sparse-attn/releases/download/v0.0.1/block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl)
+./bin/micromamba run -n py311 pip install [https://github.com/atm-mistake/block-sparse-attn/releases/download/v0.0.1/block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl](https://github.com/atm-mistake/block-sparse-attn/releases/download/v0.0.1/block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl)
 ```
 **4. Running Python Scripts**
 
 When you need to execute your .py scripts inside this new environment, simply prefix your command with ```./bin/micromamba run -n py311```:
 ```python
-./bin/micromamba run -n py311 {command}
+./bin/micromamba run -n py311 your_script.py
 ```
 
 📜 Acknowledgements & License:
