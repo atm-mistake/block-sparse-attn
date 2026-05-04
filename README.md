@@ -33,7 +33,7 @@ We specify the cu124 PyTorch wheels to ensure compatibility with this extension,
 Before you install your requirements.txt you need to rewrite it, eg:
 
 ```bash
-%%writefile requirements.txt
+cat <<EOF > requirements.txt
 torch==2.6.0+cu124
 torchaudio==2.6.0+cu124
 torchvision==0.21.0+cu124
@@ -42,6 +42,7 @@ transformers==4.46.2
 xformers
 einops==0.8.1
 # Add any other specific packages your project needs
+EOF
 ```
 
 **3. Install Dependencies & The Custom Wheel**
@@ -55,7 +56,7 @@ einops==0.8.1
 ```
 **4. Running Python Scripts**
 
-When you need to execute your .py scripts inside this new environment, simply prefix your command with ```./bin/micromamba run -n py311 run```:
+When you need to execute your .py scripts inside this new environment, simply prefix your command with ```./bin/micromamba run -n py311```:
 ```python
 ./bin/micromamba run -n py311 {command}
 ```
