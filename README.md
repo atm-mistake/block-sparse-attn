@@ -19,6 +19,7 @@ Below are the exact steps to create a compatible environment using `micromamba` 
 Run these commands in your Linux terminal to set up the environment and install the extension without compiling from source.
 
 **1. Install Micromamba & Create Environment**
+
 ```bash
 # Download micromamba to the local directory
 curl -Ls [https://micro.mamba.pm/api/micromamba/linux-64/latest](https://micro.mamba.pm/api/micromamba/linux-64/latest) | tar -xj bin/micromamba
@@ -27,8 +28,10 @@ curl -Ls [https://micro.mamba.pm/api/micromamba/linux-64/latest](https://micro.m
 ./bin/micromamba create -n py311 python=3.11 -c conda-forge -y
 ```
 **2. Define Dependencies**
+
 We specify the cu124 PyTorch wheels to ensure compatibility with this extension,
 Before you install your requirements.txt you need to rewrite it, eg:
+
 ```bash
 %%writefile requirements.txt
 torch==2.6.0+cu124
@@ -42,6 +45,7 @@ einops==0.8.1
 ```
 
 **3. Install Dependencies & The Custom Wheel**
+
 ```bash
 # Install the requirements using the PyTorch CUDA 12.4 index
 ./bin/micromamba run -n py311 pip install -r requirements.txt --extra-index-url [https://download.pytorch.org/whl/cu124](https://download.pytorch.org/whl/cu124)
@@ -50,11 +54,14 @@ einops==0.8.1
 ./bin/micromamba run -n py311 pip install [https://github.com/atm-mistake/YOUR_REPO_NAME/releases/download/v0.0.1/block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl](https://github.com/atm-mistake/block-sparse-attn/releases/download/v0.0.1/block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl)
 ```
 **4. Running Python Scripts**
+
 When you need to execute your .py scripts inside this new environment, simply prefix your command with ```./bin/micromamba run -n py311 run```:
 ```python
 ./bin/micromamba run -n py311 {command}
 ```
 
 📜 Acknowledgements & License:
+
 Micromamba: Environment management in these instructions uses Micromamba, an open-source tool by mamba-org.
+
 License: This project is licensed under the MIT License - see the LICENSE file for details.
