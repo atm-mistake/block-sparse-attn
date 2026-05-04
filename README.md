@@ -52,7 +52,7 @@ EOF
 ./bin/micromamba run -n py311 pip install -r requirements.txt --extra-index-url [https://download.pytorch.org/whl/cu124](https://download.pytorch.org/whl/cu124)
 
 # Download and install the pre-compiled custom wheel directly from GitHub Releases
-./bin/micromamba run -n py311 pip install [https://github.com/atm-mistake/block-sparse-attn/releases/download/v0.0.1/block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl](https://github.com/atm-mistake/block-sparse-attn/releases/download/v0.0.1/block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl)
+./bin/micromamba run -n py311 pip install https://github.com/atm-mistake/block-sparse-attn/releases/download/v0.0.1/block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl
 ```
 **4. Running Python Scripts**
 
