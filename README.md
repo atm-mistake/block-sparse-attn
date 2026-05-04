@@ -22,7 +22,7 @@ Run these commands in your Linux terminal to set up the environment and install 
 
 ```bash
 # Download micromamba to the local directory
-curl -Ls [https://micro.mamba.pm/api/micromamba/linux-64/latest](https://micro.mamba.pm/api/micromamba/linux-64/latest) | tar -xj bin/micromamba
+curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xj bin/micromamba
 
 # Create and activate a fresh Python 3.11 environment
 ./bin/micromamba create -n py311 python=3.11 -c conda-forge -y
