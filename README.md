@@ -2,7 +2,7 @@
 
 ```block_sparse_attn-0.0.1-cp311-cp311-linux_x86_64.whl```
 
-This is a pre-compiled custom CUDA extension for Block Sparse Attention, I used it on google colab so i decided to share it for you to save time. 
+This is a pre-compiled custom CUDA extension for Block Sparse Attention, I used it on google colab so I decided to share it to save you time.
 
 **Environment Requirements:**
 * **OS:** Linux (x86_64)
